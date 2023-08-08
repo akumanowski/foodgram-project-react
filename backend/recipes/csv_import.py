@@ -2,14 +2,16 @@
 Модуль импорта ингредиентов из файла CSV.
 """
 import csv
+import os
 from .models import Ingredient
+from foodgram.settings import FOOD_DATA_ROOT
 
-FILENAME = "data/ingredients.csv"
+FILENAME = 'ingredients.csv'
 
 
 def run_import_csv():
     """Загрузка CSV файла"""
-    with open(FILENAME, encoding='utf-8') as r_file:
+    with open(os.path.join(FOOD_DATA_ROOT, FILENAME), encoding='utf-8') as r_file:
         # Создаем объект reader, указываем символ-разделитель ","
         file_reader = csv.reader(r_file, delimiter=",")
         # Счетчики для подсчета количества строк
