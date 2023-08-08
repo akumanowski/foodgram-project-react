@@ -11,7 +11,8 @@ FILENAME = 'ingredients.csv'
 
 def run_import_csv():
     """Загрузка CSV файла"""
-    with open(os.path.join(FOOD_DATA_ROOT, FILENAME), encoding='utf-8') as r_file:
+    with open(os.path.join(FOOD_DATA_ROOT, FILENAME),
+              encoding='utf-8') as r_file:
         # Создаем объект reader, указываем символ-разделитель ","
         file_reader = csv.reader(r_file, delimiter=",")
         # Счетчики для подсчета количества строк
