@@ -123,7 +123,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-FOOD_DATA_URL = '/data/'
+# FOOD_DATA_URL = '/data/'
 FOOD_DATA_ROOT = os.path.join(BASE_DIR, 'data')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
